@@ -1,5 +1,4 @@
-const serverless = require('serverless-http');
-
+import serverless from 'serverless-http'
 import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
@@ -14,4 +13,4 @@ app.use(express.json())//para que el servidor interprete json
 
 app.use("/api",authRoutes)
 
-module.exports = serverless(app);
+export default serverless(app);
